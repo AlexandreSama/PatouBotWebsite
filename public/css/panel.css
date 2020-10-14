@@ -93,3 +93,6 @@ body{
     font-weight: 600;
     color: #0062cc;
 }
+.accueil_button:hover {
+	text-decoration: underline;
+}

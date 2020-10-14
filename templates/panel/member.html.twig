@@ -30,6 +30,10 @@
                     <div class="profile-work">
                         <p>Liens Utiles</p>
                         <a href="">Serveur Discord</a><br/>
+                        {% if is_granted("ROLE_ADMIN")%}
+                        <a href="{{path('panel_admin')}}">Panel Admin</a><br/>
+                        {% endif %}
+                        <a href="{{path('Accueil')}}" id="accueil_button">Accueil</a><br/>
                     </div>
                 </div>
                 <div class="col-md-8">

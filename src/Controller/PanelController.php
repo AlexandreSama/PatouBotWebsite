@@ -45,6 +45,9 @@ class PanelController extends AbstractController
             $ticket->setUser(
                 $user
             );
+            $ticket->setIsActive(
+                true
+            );
 
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($ticket);

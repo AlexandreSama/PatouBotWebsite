@@ -8,6 +8,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpClient\HttpClient;
 
+
 class MainController extends AbstractController
 {
     /**
@@ -17,7 +18,7 @@ class MainController extends AbstractController
     {
 
         $httpClient = HttpClient::create();
-        $response = $httpClient->request('GET', 'http://localhost/TES/coucou.json');
+        $response = $httpClient->request('GET', 'http://185.216.25.216/message.json');
 
         $content = $response->getContent();
 

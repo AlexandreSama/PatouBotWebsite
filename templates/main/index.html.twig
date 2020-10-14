@@ -29,17 +29,13 @@
                     <li><a class="smoothscroll"  href="#services" title="services">Services</a></li>
                     <li><a class="smoothscroll"  href="#works" title="works">Serveurs</a></li>
                     <li><a class="smoothscroll"  href="#clients" title="clients">Avis</a></li>
-                    <li><a class="smoothscroll"  href="#contact" title="contact">Contact</a></li>
                     {% if app.user and is_granted("ROLE_USER")%}
                     <li><a href="{{ path('panel_member') }}" title="Panel">Panel</a></li>
-                    {% elseif app.user and is_granted("ROLE_ADMIN")%}
-                    <li><a href="{{ path('panel_admin') }}" title="Panel">Panel</a></li>
+                    <li><a href="{{ path('app_logout') }}" title="Panel">Déconnexion</a></li>
                     {% else %}
                     <li><a href="{{ path('app_register') }}" title="connexion/inscription">Connexion/Inscription</a></li>
                     {% endif %}
                 </ul>
-    
-                <p>Perspiciatis hic praesentium nesciunt. Et neque a dolorum <a href='#0'>voluptatem</a> porro iusto sequi veritatis libero enim. Iusto id suscipit veritatis neque reprehenderit.</p>
     
                 <ul class="header-nav__social">
                     <li>
@@ -145,7 +141,7 @@
         <div class="row about-desc" data-aos="fade-up">
             <div class="col-full">
                 <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt. 
+                Salut à toi , si tu es ici c'est que tu recherche un bot avec des spécification particulières non ? Alors si c'est le cas tu es au bonne endroit ! Je vais te faire une courte présentation de ma personne , comme tu peut le voir mon créateur m'as nommer Patouuu c'est un bien drôle de nom hein ? Oui j'en suis totalement d'accord avec toi. Bref fin des plaisanteries , si tu es ici ce n'est pas pour m'écouter te raconter ma vie de bot ... En dessous tu peut trouver mes commandes , les Serveurs Rejoints , nombre d'inscrit sur le site , commandes disponibles ainsi que clients heureux qui correspond au nombre de personnes que j'ai à ma charge. Je dispo de multiple fonction pour m'occuper de votre serveur comme : mini-jeux , sécurité , modération , fun , ainsi que de multiples autres choses. Si tu souhaite en savoir plus sur moi n'hésite pas à rejoindre le discord officiel de mon papa !
                 </p>
             </div>
         </div> <!-- end about-desc -->
@@ -153,7 +149,7 @@
         <div class="row about-stats stats block-1-4 block-m-1-2 block-mob-full" data-aos="fade-up">
                 
             <div class="col-block stats__col ">
-                <div class="stats__count">{{ serverCount[1] }}</div>
+                <div class="stats__count">{{ serverCount[0] }}</div>
                 <h5>Serveurs Rejoins</h5>
             </div>
             <div class="col-block stats__col">
@@ -161,11 +157,11 @@
                 <h5>Nombres d'Inscrits</h5>
             </div>
             <div class="col-block stats__col">
-                <div class="stats__count">{{ serverCount[0] }}</div>
+                <div class="stats__count">{{ serverCount[1] }}</div>
                 <h5>Commandes Disponibles</h5>
             </div>
             <div class="col-block stats__col">
-                <div class="stats__count">102</div>
+                <div class="stats__count">{{ serverCount[2] }}</div>
                 <h5>Clients Heureux</h5> 
             </div>
 
