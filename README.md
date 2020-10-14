@@ -1,6 +1,6 @@
 # PatouBotWebsite
 
-A Simple Website for Patouuu's Discord Bot
+![alt text](https://zupimages.net/up/20/42/0v6n.png)
 
 ## Frameworks
 
