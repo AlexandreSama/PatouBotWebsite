@@ -2,6 +2,6 @@
 
 A Simple Website for Patouuu's Discord Bot
 
-# Frameworks
+## Frameworks
 
-Created With Symfony
+Created With Symfony. I used CSS, JS, SCSS, Twig and FontAwesome for each templates.
